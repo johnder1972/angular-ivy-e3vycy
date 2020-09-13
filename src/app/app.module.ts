@@ -27,7 +27,11 @@ import { AppComponent } from './app.component';
 // Use RouterModule, Routes for activating routing in angular
 import { RouterModule, Routes } from '@angular/router';
 
-import { MatDatepickerModule, MatNativeDateModule,MatInputModule } from '@angular/material';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MAT_DATE_LOCALE,LOCALE_ID } from '@angular/material';
+
 
 // Routes array define component along with the path name for url
 const routes: Routes = [
@@ -62,7 +66,8 @@ const routes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule
   ],
-  providers: [],
+  providers: [ { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' },         
+  { provide: LOCALE_ID, useValue: "fr-FR" },],
   bootstrap: [AppComponent],
 
 })
