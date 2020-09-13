@@ -27,6 +27,7 @@ import { AppComponent } from './app.component';
 // Use RouterModule, Routes for activating routing in angular
 import { RouterModule, Routes } from '@angular/router';
 
+import { MatDatepickerModule, MatNativeDateModule,MatInputModule } from '@angular/material';
 
 // Routes array define component along with the path name for url
 const routes: Routes = [
@@ -45,6 +46,8 @@ const routes: Routes = [
     EditStudentComponent
   ],
   imports: [
+    MatDatepickerModule,
+        MatNativeDateModule,
     RouterModule.forRoot(routes),
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
@@ -60,6 +63,10 @@ const routes: Routes = [
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+                MatDatepickerModule, 
+                MatNativeDateModule 
+            ]
 })
 export class AppModule { }
