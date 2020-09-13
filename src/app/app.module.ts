@@ -46,8 +46,7 @@ const routes: Routes = [
     EditStudentComponent
   ],
   imports: [
-    MatDatepickerModule,
-        MatNativeDateModule,
+ 
     RouterModule.forRoot(routes),
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase), // Main Angular fire module 
@@ -59,14 +58,12 @@ const routes: Routes = [
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,      
     }),
-    NgxPaginationModule  // NGX pagination module
-    
+    NgxPaginationModule,  // NGX pagination module
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [
-                MatDatepickerModule, 
-                MatNativeDateModule 
-            ]
+
 })
 export class AppModule { }
