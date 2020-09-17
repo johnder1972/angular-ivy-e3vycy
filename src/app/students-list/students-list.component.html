@@ -30,7 +30,8 @@
       <thead>
         <tr>
           <th scope="col">Student Id</th>
-          <th scope="col">Student name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Durée</th>
           <th scope="col">Email</th>
           <th scope="col">Mobile number</th>
           <th class="text-center" scope="col">Edit</th>
@@ -41,7 +42,8 @@
         <!-- paginate pipe will add pagination in student's list, it won't show if items are less then 7 -->
         <tr *ngFor="let student of Student | paginate: { itemsPerPage: 7, currentPage: p }; let i = index;">
           <th scope="row">{{student.$key}}</th>
-          <td>{{student.firstName}} {{student.lastName}}</td>
+          <td>{{student.projectDate}} </td>
+          <td>{{student.lastName}}</td>
           <td>{{student.email}}</td>
           <td>{{student.mobileNumber}}</td>
           <td class="text-center action-block">

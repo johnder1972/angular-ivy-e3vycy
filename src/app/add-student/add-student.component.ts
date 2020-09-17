@@ -28,7 +28,7 @@ export class AddStudentComponent implements OnInit {
   // Reactive student form
   studenForm() {
     this.studentForm = this.fb.group({
-      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      projectDate: ['', [Validators.required, Validators.minLength(2)]],
       lastName: [''],
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
@@ -36,8 +36,8 @@ export class AddStudentComponent implements OnInit {
   }
 
   // Accessing form control using getters
-  get firstName() {
-    return this.studentForm.get('firstName');
+  get projectDate() {
+    return this.studentForm.get('projectDate');
   }
 
   get lastName() {
@@ -59,7 +59,7 @@ export class AddStudentComponent implements OnInit {
  
   submitStudentData() {
     this.crudApi.AddStudent(this.studentForm.value); // Submit student data using CRUD API
-    this.toastr.success(this.studentForm.controls['firstName'].value + ' successfully added!'); // Show success message when data is successfully submited
+    this.toastr.success(this.studentForm.controls['projectDate'].value + ' successfully added!'); // Show success message when data is successfully submited
     this.ResetForm();  // Reset form when clicked on reset button
    };
 

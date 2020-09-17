@@ -32,8 +32,8 @@ export class EditStudentComponent implements OnInit {
   }
 
   // Accessing form control using getters
-  get firstName() {
-    return this.editForm.get('firstName');
+  get projectDate() {
+    return this.editForm.get('projectDate');
   }
 
   get lastName() {
@@ -51,7 +51,7 @@ export class EditStudentComponent implements OnInit {
   // Contains Reactive Form logic
   updateStudentData() {
     this.editForm = this.fb.group({
-      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      projectDate: ['', [Validators.required, Validators.minLength(2)]],
       lastName: [''],
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
@@ -66,7 +66,7 @@ export class EditStudentComponent implements OnInit {
   // Below methods fire when somebody click on submit button
   updateForm(){
     this.crudApi.UpdateStudent(this.editForm.value);       // Update student data using CRUD API
-    this.toastr.success(this.editForm.controls['firstName'].value + ' updated successfully');   // Show succes message when data is successfully submited
+    this.toastr.success(this.editForm.controls['projectDate'].value + ' updated successfully');   // Show succes message when data is successfully submited
     this.router.navigate(['view-students']);               // Navigate to student's list page when student data is updated
   }
 

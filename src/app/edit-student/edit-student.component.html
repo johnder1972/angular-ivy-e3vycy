@@ -17,10 +17,10 @@
           <div class="col-lg-5 col-md-12 col-sm-12">
             <div class="row">
               <div class="col-md-12 mb-3">
-                <label>First name</label>
-                <input type="text" formControlName="firstName" class="form-control" required>
-                <p *ngIf="firstName.touched && firstName.invalid" class="error"><sup>*</sup>Please enter first name</p>
-                <p *ngIf="firstName.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 2 words</p>
+                <label>Date</label>
+                <input type="text" formControlName="projectDate" class="form-control" required>
+                <p *ngIf="projectDate.touched && projectDate.invalid" class="error"><sup>*</sup>Please enter first name</p>
+                <p *ngIf="projectDate.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 2 words</p>
               </div>
               <div class="col-md-12 mb-3">
                 <label>Last name</label>

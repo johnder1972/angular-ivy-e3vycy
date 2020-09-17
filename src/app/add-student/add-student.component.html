@@ -11,21 +11,11 @@
 
         <div class="col-md-12 mb-3">
           <label>Date</label>
-          <input type="text" formControlName="firstName" class="form-control" required>
+          <input type="text" formControlName="projectDate" class="form-control" required>
           <!-- Showing errors using getter method -->
-          <p *ngIf="firstName.touched && firstName.invalid" class="error"><sup>*</sup>Veuillez entrer la date du projet</p>
-          <p *ngIf="firstName.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une date</p>
+          <p *ngIf="projectDate.touched && projectDate.invalid" class="error"><sup>*</sup>Veuillez entrer la date du projet</p>
+          <p *ngIf="projectDate.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une date</p>
         </div>
-
-<div class="col-md-12 mb-3">
-<input matInput [matDatepicker]="picker" placeholder="Pick a date">
-<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-<mat-datepicker #picker></mat-datepicker>
-</div>
-
-
-
-
 
         <div class="col-md-12 mb-3">
           <label>Last name</label>
