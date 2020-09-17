@@ -17,8 +17,8 @@ export class CrudService {
   AddStudent(student: Student) {
     this.studentsRef.push({
       projectDate: student.projectDate,
-      lastName: student.lastName,
-      email: student.email,
+      projetLenght: student.projetLenght,
+      membres: student.membres,
       mobileNumber: student.mobileNumber
     })
   }
@@ -39,8 +39,8 @@ export class CrudService {
   UpdateStudent(student: Student) {
     this.studentRef.update({
       projectDate: student.projectDate,
-      lastName: student.lastName,
-      email: student.email,
+      projetLenght: student.projetLenght,
+      membres: student.membres,
       mobileNumber: student.mobileNumber
     })
   }  

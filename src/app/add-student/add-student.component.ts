@@ -29,8 +29,8 @@ export class AddStudentComponent implements OnInit {
   studenForm() {
     this.studentForm = this.fb.group({
       projectDate: ['', [Validators.required, Validators.minLength(2)]],
-      lastName: [''],
-      email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
+      projetLenght: [''],
+      membres: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
       mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
     })  
   }
@@ -40,12 +40,12 @@ export class AddStudentComponent implements OnInit {
     return this.studentForm.get('projectDate');
   }
 
-  get lastName() {
-    return this.studentForm.get('lastName');
+  get projetLenght() {
+    return this.studentForm.get('projetLenght');
   }  
 
-  get email() {
-    return this.studentForm.get('email');
+  get membres() {
+    return this.studentForm.get('membres');
   }
 
   get mobileNumber() {

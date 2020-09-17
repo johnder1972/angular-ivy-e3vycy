@@ -1,7 +1,7 @@
 export interface Student {
    $key: string;
    projectDate : string;
-   lastName: string;
-   email: string
+   projetLenght: string;
+   membres: string
    mobileNumber: Number;
 }

@@ -18,19 +18,22 @@
         </div>
 
         <div class="col-md-12 mb-3">
-          <label>Last name</label>
-          <input type="text" formControlName="lastName" class="form-control">
+          <label>Durée</label>
+          <input type="text" formControlName="projetLenght" class="form-control">
+          <!-- Showing errors using getter method -->
+          <p *ngIf="projetLenght.touched && projetLenght.invalid" class="error"><sup>*</sup>Veuillez entrer la durée du projet en nombre de périodes</p>
+          <p *ngIf="projetLenght.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une durée en nombre de périodes</p>
         </div>
 
       </div>
 
       <div class="row">
         <div class="col-md-12 mb-3">
-          <label>Email</label>
-          <input type="email" formControlName="email" class="form-control" required>
+          <label>Membres</label>
+          <input type="text" formControlName="membres" class="form-control" required>
           <!-- Showing errors using getter method -->
-          <p *ngIf="email.touched && email.invalid" class="error"><sup>*</sup>Please provide email</p>
-          <p *ngIf="email.errors?.pattern" class="error"><sup>*</sup>Please enter correct email</p>
+          <p *ngIf="membres.touched && membres.invalid" class="error"><sup>*</sup>Veuillez encoder au moins un autre membres</p>
+          <p *ngIf="membres.errors?.minlength" class="error"><sup>*</sup>Ajouter un membre non existant ?</p>
         </div>
 
         <div class="col-md-12 mb-3">

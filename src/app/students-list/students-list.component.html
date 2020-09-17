@@ -32,7 +32,7 @@
           <th scope="col">Student Id</th>
           <th scope="col">Date</th>
           <th scope="col">Durée</th>
-          <th scope="col">Email</th>
+          <th scope="col">membres</th>
           <th scope="col">Mobile number</th>
           <th class="text-center" scope="col">Edit</th>
         </tr>
@@ -43,8 +43,8 @@
         <tr *ngFor="let student of Student | paginate: { itemsPerPage: 7, currentPage: p }; let i = index;">
           <th scope="row">{{student.$key}}</th>
           <td>{{student.projectDate}} </td>
-          <td>{{student.lastName}}</td>
-          <td>{{student.email}}</td>
+          <td>{{student.projetLenght}}</td>
+          <td>{{student.membres}}</td>
           <td>{{student.mobileNumber}}</td>
           <td class="text-center action-block">
             <i class="fa fa-edit" routerLink="/edit-student/{{student.$key}}"></i>
