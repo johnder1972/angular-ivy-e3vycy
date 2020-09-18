@@ -19,7 +19,9 @@ export class CrudService {
       projectDate: student.projectDate,
       projetLenght: student.projetLenght,
       membres: student.membres,
-      mobileNumber: student.mobileNumber
+      objectifs: student.objectifs,
+      taches: student.taches,
+      decisions: student.decisions
     })
   }
 
@@ -41,8 +43,10 @@ export class CrudService {
       projectDate: student.projectDate,
       projetLenght: student.projetLenght,
       membres: student.membres,
-      mobileNumber: student.mobileNumber
-    })
+      objectifs: student.objectifs,
+      taches: student.taches,
+      decisions: student.decisions
+ })
   }  
 
   // Delete Student Object

@@ -44,9 +44,17 @@ export class EditStudentComponent implements OnInit {
     return this.editForm.get('membres');
   }
 
-  get mobileNumber() {
-    return this.editForm.get('mobileNumber');
-  }  
+    get objectifs() {
+    return this.editForm.get('objectifs');
+  }
+
+  get taches() {
+    return this.editForm.get('taches');
+  }
+
+  get decisions() {
+    return this.editForm.get('decisions');
+  }
 
   // Contains Reactive Form logic
   updateStudentData() {
@@ -54,8 +62,10 @@ export class EditStudentComponent implements OnInit {
       projectDate: ['', [Validators.required, Validators.minLength(2)]],
       projetLenght: ['',[Validators.required, Validators.minLength(2)]],
       membres: ['', [Validators.required, Validators.minLength(2)]],
-      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
-    })
+      objectis: [''],
+      taches: [''],
+      decisions: [''],
+})
   }
 
   // Go back to previous component

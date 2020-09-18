@@ -25,9 +25,7 @@
           <p *ngIf="projetLenght.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une durée en nombre de périodes</p>
         </div>
 
-      </div>
-
-      <div class="row">
+      
         <div class="col-md-12 mb-3">
           <label>Membres</label>
           <input type="text" formControlName="membres" class="form-control" required>
@@ -37,20 +35,36 @@
         </div>
 
         <div class="col-md-12 mb-3">
-          <label>Mobile number</label>
-          <input type="text" formControlName="mobileNumber" class="form-control" required>
+          <label>Objectif(s)</label>
+          <input type="text" formControlName="objectifs" class="form-control" required>
           <!-- Showing errors using getter method -->
-          <p *ngIf="mobileNumber.touched && mobileNumber.invalid" class="error"><sup>*</sup>Please provide contact
-            number</p>
-          <p *ngIf="mobileNumber.errors?.pattern" class="error"><sup>*</sup>Use numbers only
-            number</p>
+          <p *ngIf="objectifs.touched && ojectifs.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une tâche</p>
+          <p *ngIf="objectifs.errors?.minlength" class="error"><sup>*</sup>Il faut au moins deux lettres</p>
+        </div>
+
+            
+        <div class="col-md-12 mb-3">
+          <label>Tâche(s)</label>
+          <input type="text" formControlName="taches" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="taches.touched && taches.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une tâche</p>
+          
+        </div>
+
+           
+        <div class="col-md-12 mb-3">
+          <label>Décision(s)</label>
+          <input type="text" formControlName="decision" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="decision.touched && decision.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une décision</p>
+          
         </div>
 
       </div>
 
       <div class="form-group text-right">
         <button type="button" class="btn btn-secondary gap-right" (click)="ResetForm()">Reset</button>
-        <button type="submit" class="btn btn-success" [disabled]="!studentForm.valid">Ajout Projet</button>
+        <button type="submit" class="btn btn-success" [disabled]="studentForm.valid">Ajout Projet</button>
       </div>
 
     </div>

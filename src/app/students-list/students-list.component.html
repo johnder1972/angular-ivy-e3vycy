@@ -33,7 +33,9 @@
           <th scope="col">Date</th>
           <th scope="col">Durée</th>
           <th scope="col">Membres</th>
-          <th scope="col">Mobile number</th>
+          <th scope="col">Objectif(s)</th>
+          <th scope="col">Tâche(s)</th>
+          <th scope="col">Décision(s)</th>
           <th class="text-center" scope="col">Edit</th>
         </tr>
       </thead>
@@ -45,7 +47,9 @@
           <td>{{student.projectDate}} </td>
           <td>{{student.projetLenght}}</td>
           <td>{{student.membres}}</td>
-          <td>{{student.mobileNumber}}</td>
+          <td>{{student.objectifs}}</td>
+          <td>{{student.taches}}</td>
+          <td>{{student.decisions}}</td>
           <td class="text-center action-block">
             <i class="fa fa-edit" routerLink="/edit-student/{{student.$key}}"></i>
             <i class="fa fa-trash" (click)="deleteStudent(student)"></i></td>

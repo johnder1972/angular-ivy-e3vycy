@@ -30,9 +30,12 @@ export class AddStudentComponent implements OnInit {
     this.studentForm = this.fb.group({
       projectDate: ['', [Validators.required, Validators.minLength(2)]],
       projetLenght: [''],
-      membres: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
-      mobileNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
-    })  
+      membres: [''],
+      objectfis: [''],
+      taches: [''],
+      decisions: [''],
+      
+      })  
   }
 
   // Accessing form control using getters
@@ -48,8 +51,16 @@ export class AddStudentComponent implements OnInit {
     return this.studentForm.get('membres');
   }
 
-  get mobileNumber() {
-    return this.studentForm.get('mobileNumber');
+  get objectifs() {
+    return this.studentForm.get('objectifs');
+  }
+
+  get taches() {
+    return this.studentForm.get('taches');
+  }
+
+  get decisions() {
+    return this.studentForm.get('decisions');
   }
 
   // Reset student form's values
