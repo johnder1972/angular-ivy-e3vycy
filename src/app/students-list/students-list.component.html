@@ -44,8 +44,8 @@
         <!-- paginate pipe will add pagination in student's list, it won't show if items are less then 7 -->
         <tr *ngFor="let student of Student | paginate: { itemsPerPage: 7, currentPage: p }; let i = index;">
           <th scope="row">{{student.$key}}</th>
-          <td>{{student.projectDate}} </td>
-          <td>{{student.projetLenght}}</td>
+          <td>{{student.date}} </td>
+          <td>{{student.duree}}</td>
           <td>{{student.membres}}</td>
           <td>{{student.buts}}</td>
           <td>{{student.taches}}</td>

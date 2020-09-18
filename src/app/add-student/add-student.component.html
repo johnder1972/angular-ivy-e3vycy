@@ -11,18 +11,18 @@
 
         <div class="col-md-12 mb-3">
           <label>Date</label>
-          <input type="text" formControlName="projectDate" class="form-control" required>
+          <input type="text" formControlName="date" class="form-control" required>
           <!-- Showing errors using getter method -->
-          <p *ngIf="projectDate.touched && projectDate.invalid" class="error"><sup>*</sup>Veuillez entrer la date du projet</p>
-          <p *ngIf="projectDate.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une date</p>
+          <p *ngIf="date.touched && date.invalid" class="error"><sup>*</sup>Veuillez entrer la date du projet</p>
+          <p *ngIf="date.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une date</p>
         </div>
 
         <div class="col-md-12 mb-3">
           <label>Durée</label>
-          <input type="text" formControlName="projetLenght" class="form-control" required>
+          <input type="text" formControlName="duree" class="form-control" required>
           <!-- Showing errors using getter method -->
-          <p *ngIf="projetLenght.touched && projetLenght.invalid" class="error"><sup>*</sup>Veuillez entrer la durée du projet en nombre de périodes</p>
-          <p *ngIf="projetLenght.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une durée en nombre de périodes</p>
+          <p *ngIf="duree.touched && duree.invalid" class="error"><sup>*</sup>Veuillez entrer la durée du projet en nombre de périodes</p>
+          <p *ngIf="duree.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une durée en nombre de périodes</p>
         </div>
 
       

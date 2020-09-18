@@ -28,8 +28,8 @@ export class AddStudentComponent implements OnInit {
   // Reactive student form
   studenForm() {
     this.studentForm = this.fb.group({
-      projectDate: ['', [Validators.required, Validators.minLength(2)]],
-      projetLenght: [''],
+      date: ['', [Validators.required, Validators.minLength(2)]],
+      duree: [''],
       membres: [''],
       buts: [''],
       taches: [''],
@@ -39,12 +39,12 @@ export class AddStudentComponent implements OnInit {
   }
 
   // Accessing form control using getters
-  get projectDate() {
-    return this.studentForm.get('projectDate');
+  get date() {
+    return this.studentForm.get('date');
   }
 
-  get projetLenght() {
-    return this.studentForm.get('projetLenght');
+  get duree() {
+    return this.studentForm.get('duree');
   }  
 
   get membres() {
@@ -70,7 +70,7 @@ export class AddStudentComponent implements OnInit {
  
   submitStudentData() {
     this.crudApi.AddStudent(this.studentForm.value); // Submit student data using CRUD API
-    this.toastr.success(this.studentForm.controls['projectDate'].value + ' successfully added!'); // Show success message when data is successfully submited
+    this.toastr.success(this.studentForm.controls['date'].value + ' successfully added!'); // Show success message when data is successfully submited
     this.ResetForm();  // Reset form when clicked on reset button
    };
 

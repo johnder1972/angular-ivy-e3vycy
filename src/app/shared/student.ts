@@ -1,7 +1,7 @@
 export interface Student {
    $key: string;
-   projectDate : string;
-   projetLenght: string;
+   date : string;
+   duree: string;
    membres: string;
    buts: string;
    taches: string;
