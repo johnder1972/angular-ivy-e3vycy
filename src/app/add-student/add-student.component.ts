@@ -51,8 +51,8 @@ export class AddStudentComponent implements OnInit {
     return this.studentForm.get('membres');
   }
 
-  get objectifs() {
-    return this.studentForm.get('objectifs');
+  get buts() {
+    return this.studentForm.get('buts');
   }
 
   get taches() {

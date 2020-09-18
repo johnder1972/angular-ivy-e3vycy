@@ -19,7 +19,7 @@ export class CrudService {
       projectDate: student.projectDate,
       projetLenght: student.projetLenght,
       membres: student.membres,
-      objectifs: student.objectifs,
+      buts: student.buts,
       taches: student.taches,
       decisions: student.decisions
     })
@@ -43,7 +43,7 @@ export class CrudService {
       projectDate: student.projectDate,
       projetLenght: student.projetLenght,
       membres: student.membres,
-      objectifs: student.objectifs,
+      buts: student.buts,
       taches: student.taches,
       decisions: student.decisions
  })

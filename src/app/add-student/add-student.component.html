@@ -36,10 +36,10 @@
 
         <div class="col-md-12 mb-3">
           <label>Objectif(s)</label>
-          <input type="text" formControlName="objectifs" class="form-control" required>
+          <input type="text" formControlName="buts" class="form-control" required>
           <!-- Showing errors using getter method -->
-          <!--<p *ngIf="objectifs.touched && objectifs.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une tâche</p>-->
-          <p *ngIf="objectifs.errors?.minlength" class="error"><sup>*</sup>Il faut au moins deux lettres</p>
+          <!--<p *ngIf="buts.touched && buts.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une tâche</p>
+          <p *ngIf="buts.errors?.minlength" class="error"><sup>*</sup>Il faut au moins deux lettres</p>-->
         </div>
 
             
@@ -54,9 +54,9 @@
            
         <div class="col-md-12 mb-3">
           <label>Décision(s)</label>
-          <input type="text" formControlName="decision" class="form-control" required>
+          <input type="text" formControlName="decisions" class="form-control" required>
           <!-- Showing errors using getter method -->
-          <p *ngIf="decision.touched && decision.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une décision</p>
+          <p *ngIf="decisions.touched && decisions.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une décision</p>
           
         </div>
 

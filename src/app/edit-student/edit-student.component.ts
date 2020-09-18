@@ -44,8 +44,8 @@ export class EditStudentComponent implements OnInit {
     return this.editForm.get('membres');
   }
 
-    get objectifs() {
-    return this.editForm.get('objectifs');
+    get buts() {
+    return this.editForm.get('buts');
   }
 
   get taches() {

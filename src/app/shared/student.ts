@@ -3,7 +3,7 @@ export interface Student {
    projectDate : string;
    projetLenght: string;
    membres: string;
-   objectifs: string;
+   buts: string;
    taches: string;
    decisions: string;
    
