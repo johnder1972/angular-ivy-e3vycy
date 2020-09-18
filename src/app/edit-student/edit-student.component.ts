@@ -62,7 +62,7 @@ export class EditStudentComponent implements OnInit {
       projectDate: ['', [Validators.required, Validators.minLength(2)]],
       projetLenght: ['',[Validators.required, Validators.minLength(2)]],
       membres: ['', [Validators.required, Validators.minLength(2)]],
-      objectis: [''],
+      buts: [''],
       taches: [''],
       decisions: [''],
 })

@@ -31,7 +31,7 @@ export class AddStudentComponent implements OnInit {
       projectDate: ['', [Validators.required, Validators.minLength(2)]],
       projetLenght: [''],
       membres: [''],
-      objectfis: [''],
+      buts: [''],
       taches: [''],
       decisions: [''],
       

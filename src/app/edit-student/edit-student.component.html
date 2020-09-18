@@ -15,33 +15,39 @@
       <form [formGroup]="editForm" (ngSubmit)="updateForm()" novalidate>
         <div class="row">
           <div class="col-lg-5 col-md-12 col-sm-12">
-            <div class="row">
-              <div class="col-md-12 mb-3">
-                <label>Date</label>
-                <input type="text" formControlName="projectDate" class="form-control" required>
-                <p *ngIf="projectDate.touched && projectDate.invalid" class="error"><sup>*</sup>Please enter first name</p>
-                <p *ngIf="projectDate.errors?.minlength" class="error"><sup>*</sup>Name shouldn't be less than 2 words</p>
-              </div>
-              <div class="col-md-12 mb-3">
-                <label>Durée</label>
-                <input type="text" formControlName="projetLenght" class="form-control">
-                <p *ngIf="projetLenght.touched && projetLenght.invalid" class="error"><sup>*</sup>Veuillez entrer la durée du projet en nombre de périodes</p>
-                <p *ngIf="projetLenght.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une durée en nombre de périodes</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 mb-3">
-                <label>Membres</label>
-                <input type="membres" formControlName="membres" class="form-control" required>
-                <p *ngIf="membres.touched && membres.invalid" class="error"><sup>*</sup>Veuillez encoder au moins un autre membres</p>
-                <p *ngIf="membres.errors?.pattern" class="error"><sup>*</sup>Ajouter un membre non existant ?</p>
-              </div>
-                      <div class="col-md-12 mb-3">
-          <label>Ojectif(s)</label>
+       <div class="row">
+
+        <div class="col-md-12 mb-3">
+          <label>Date</label>
+          <input type="text" formControlName="projectDate" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="projectDate.touched && projectDate.invalid" class="error"><sup>*</sup>Veuillez entrer la date du projet</p>
+          <p *ngIf="projectDate.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une date</p>
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label>Durée</label>
+          <input type="text" formControlName="projetLenght" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="projetLenght.touched && projetLenght.invalid" class="error"><sup>*</sup>Veuillez entrer la durée du projet en nombre de périodes</p>
+          <p *ngIf="projetLenght.errors?.minlength" class="error"><sup>*</sup>Il faut que ce soit une durée en nombre de périodes</p>
+        </div>
+
+      
+        <div class="col-md-12 mb-3">
+          <label>Membres</label>
+          <input type="text" formControlName="membres" class="form-control" required>
+          <!-- Showing errors using getter method -->
+          <p *ngIf="membres.touched && membres.invalid" class="error"><sup>*</sup>Veuillez encoder au moins un autre membres</p>
+          <p *ngIf="membres.errors?.minlength" class="error"><sup>*</sup>Ajouter un membre non existant ?</p>
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label>Objectif(s)</label>
           <input type="text" formControlName="buts" class="form-control" required>
           <!-- Showing errors using getter method -->
-
-          <p *ngIf="buts.errors?.minlength" class="error"><sup>*</sup>Il faut au mons deux lettres</p>
+          <!--<p *ngIf="buts.touched && buts.invalid" class="error"><sup>*</sup>Veuillez encoder au moins une tâche</p>
+          <p *ngIf="buts.errors?.minlength" class="error"><sup>*</sup>Il faut au moins deux lettres</p>-->
         </div>
 
             
@@ -62,12 +68,13 @@
           
         </div>
 
+      </div>
             </div>
             <div class="form-group text-right">
               <button type="submit" class="btn btn-success btn-block" [disabled]="!editForm.valid">Modifier</button>
             </div>
           </div>
-        </div>
+       
       </form><!-- Student's Edit Form ends-->
 
     </div>
