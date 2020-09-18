@@ -61,7 +61,7 @@ export class EditStudentComponent implements OnInit {
     this.editForm = this.fb.group({
       projectDate: ['', [Validators.required, Validators.minLength(2)]],
       projetLenght: ['',[Validators.required, Validators.minLength(2)]],
-      membres: ['', [Validators.required, Validators.minLength(2)]],
+      membres: [''],
       buts: [''],
       taches: [''],
       decisions: [''],
