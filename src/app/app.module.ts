@@ -31,6 +31,12 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
 import { MAT_DATE_LOCALE,LOCALE_ID } from '@angular/material';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { AppRoutingComponent } from './app-routing/app-routing.component';
 
 
 // Routes array define component along with the path name for url
@@ -47,7 +53,13 @@ const routes: Routes = [
     AppComponent,
     AddStudentComponent,
     StudentsListComponent,
-    EditStudentComponent
+    EditStudentComponent,
+    DashboardComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
+    AppRoutingComponent
   ],
   imports: [
  
